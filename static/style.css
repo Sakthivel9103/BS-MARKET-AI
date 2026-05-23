@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    background:linear-gradient(135deg,#4a63d2,#273216,#111827);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#fdfdfd;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:0.2;
+    top:-150px;
+    left:-150px;
+}
+body::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#4f55d1;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:0.2;
+    bottom:-150px;
+    right:-150px;
+}
+.chat-container{
+    width:420px;
+    background:rgba(17,25,40,0.9);
+    border-radius:25px;
+    padding:20px;
+    box-shadow:0 0 30px rgba(0,255,200,0.2);
+    position:relative;
+    z-index:10;
+    backdrop-filter:blur(10px);
+}
+.chat-container h1{
+    text-align:center;
+    color:#cd1d1d;
+    margin-bottom:20px;
+    font-size:34px;
+    text-shadow:0 0 15px #e12727;
+}
+.chat-box{
+    height:420px;
+    overflow-y:auto;
+    background:#0f172a;
+    border-radius:20px;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid rgba(255,255,255,0.05);
+}
+.bot,
+.user{
+    padding:12px 16px;
+    margin:10px 0;
+    border-radius:18px;
+    width:fit-content;
+    max-width:80%;
+    animation:popup 0.3s ease;
+}
+.bot{
+    background:#00ffcc;
+    color:black;
+    font-weight:bold;
+}
+.user{
+    background:#2563eb;
+    color:white;
+    margin-left:auto;
+}
+nput-box{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.input-box input{
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: #123;
+    color: white;
+}
+.input-box button{
+    padding: 10px 12px;
+    border: none;
+    border-radius: 10px;
+    background: #72ffd3;
+    cursor: pointer;
+    font-size: 14px;
+}
+input{
+    flex:1;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:#1e293b;
+    color:white;
+    font-size:16px;
+}
+button{
+    padding:14px 22px;
+    border:none;
+    border-radius:15px;
+    background:#00ffcc;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}button:hover{
+    background:#00ffaa;
+    transform:scale(1.05);
+}@keyframes popup{
+       from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BS MARKET AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>BS MARKET AI</h1>
+        <div class="chat-box" id="chat-box">
+            <div class="bot">
+                👋welcome user
+            </div>
+        </div>
+        <div class="input-box">
+            <input type="text" id="userinput" placeholder="Type message...">
+            <button onclick="sendMessage()">
+                Send
+            </button>
+            <button onclick="startVoice()">🎙️</button>
+<a href="https://wa.me/916379174191"target="_blank">
+    <button>💬</button>
+</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body></html>
